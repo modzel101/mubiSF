@@ -74,7 +74,7 @@ global with sharing class LeadManagerService {
         String message = 'Errors: \n';
         if (!result.getErrors().isEmpty()) {
             for (Database.Error err : result.getErrors()) {
-                message = +err.getFields() + ' ' + err.getMessage() + '\n';
+                message += err.getFields() + ' ' + err.getMessage() + '\n';
             }
         }
         return message;
